@@ -32,11 +32,6 @@ $mngNsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroupName -Loca
 
 Write-Host "Creating dbSubnet network security group..."
 # Write your code for creation of management NSG here ->
-# $dbDenyOuterTrafficRule = New-AzNetworkSecurityRuleConfig -Name db-rule -Description "Deny WAN traffic" `
-#     -Access Deny -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix `
-#     Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange *
-# -SecurityRules $dbDenyOuterTrafficRule
-
 $dbNsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroupName -Location $location -Name `
     "database"
 
