@@ -1,6 +1,5 @@
 $location = "uksouth"
 $resourceGroupName = "mate-azure-task-16"
-
 $virtualNetworkName = "todoapp"
 $vnetAddressPrefix = "10.20.30.0/24"
 $webSubnetName = "webservers"
