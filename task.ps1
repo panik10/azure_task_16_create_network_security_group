@@ -32,8 +32,7 @@ $mngNsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroupName -Loca
 
 Write-Host "Creating dbSubnet network security group..."
 # Write your code for creation of management NSG here ->
-$dbNsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroupName -Location $location -Name `
-    "database"
+$dbNsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroupName -Location $location -Name "database"
 
 Write-Host "Creating a virtual network ..."
 $webSubnet = New-AzVirtualNetworkSubnetConfig -Name $webSubnetName -AddressPrefix $webSubnetIpRange -NetworkSecurityGroup $webNsg
